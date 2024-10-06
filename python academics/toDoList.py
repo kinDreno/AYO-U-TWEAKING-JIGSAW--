@@ -24,7 +24,7 @@ def view_tasks():
 
 def delete_task():
     view_tasks()
-    if todoList:
+    if len(todoList) == 0:
         task_number = int(input("\nEnter the task number to delete: "))
         if 1 <= task_number <= len(todoList):
             task = todoList.pop(task_number - 1)
