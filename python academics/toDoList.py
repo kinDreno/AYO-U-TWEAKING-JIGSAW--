@@ -1,5 +1,5 @@
 
-todo_list = []
+todoList = []
 
 def show_menu():
     print("\n=== To-Do List Menu ===")
@@ -11,29 +11,29 @@ def show_menu():
 
 def add_task():
     task = input("Enter a task: ")
-    todo_list.append(task)
+    todoList.append(task)
     print(f"Task '{task}' added!")
 
 def view_tasks():
-    if not todo_list:
+    if len(todoList) == 0:
         print("No tasks in the list.")
     else:
         print("\n=== To-Do List ===")
-        for idx, task in enumerate(todo_list, start=1):
-            print(f"{idx}. {task}")
+        for i in range(len(todoList)):
+            print(f"{i}. {todoList[i]}")
 
 def delete_task():
     view_tasks()
-    if todo_list:
+    if todoList:
         task_number = int(input("\nEnter the task number to delete: "))
-        if 1 <= task_number <= len(todo_list):
-            task = todo_list.pop(task_number - 1)
+        if 1 <= task_number <= len(todoList):
+            task = todoList.pop(task_number - 1)
             print(f"Task '{task}' deleted!")
         else:
             print("Invalid task number!")
 
 def clear_tasks():
-    todo_list.clear()
+    todoList.clear()
     print("All tasks cleared!")
 
 
