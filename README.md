@@ -1,5 +1,5 @@
-Files of my python practices.
+Private Folders and Files aren't included in this repository.
 
-I have two options in this language. 
-1. Use this to learn Artificial Intelligence.
-2. Dump it.
+<br>
+
+<h1>Attempting to work on an Aritificial Intelligence project</h1>
