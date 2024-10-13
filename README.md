@@ -1,3 +1,3 @@
-Files of my python practices.
+Private Folders and Files aren't included in this repository.
 
-Will definitely dump this language after first year.
+<br>
