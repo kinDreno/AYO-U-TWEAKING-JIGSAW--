@@ -10,8 +10,6 @@
 
 
 
-
-# Initialize an empty list to store the books
 library = []
 
 def add_book(title, author, year):
@@ -54,7 +52,7 @@ def return_book(title):
             return
     print(f'Book titled "{title}" not found.')
 
-# Main loop for user interaction
+
 while True:
     print("\n1. Add a book")
     print("2. Display all books")
