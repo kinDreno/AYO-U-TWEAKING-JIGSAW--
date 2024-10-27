@@ -1,18 +1,18 @@
-# students = [
-#     {'name': 'Alice', 'grade': 90},
-#     {'name': 'Bob', 'grade': 75},
-#     {'name': 'Charlie', 'grade': 60},
-#     {'name': 'David', 'grade': 80},
-#     {'name': 'Eve', 'grade': 55},
-# ]
+students = [
+    {'name': 'Alice', 'grade': 90},
+    {'name': 'Bob', 'grade': 75},
+    {'name': 'Charlie', 'grade': 60},
+    {'name': 'David', 'grade': 80},
+    {'name': 'Eve', 'grade': 55},
+]
 
-# grd = [student for student in students if student['grade'] > 76]
-# print(grd)
+grd = [student for student in students if student['grade'] > 76]
+print(grd)
 
 
 x = "Hello world"
-nest = [[word] for word in x.split()]
-print(nest)
+nest = [word for word in x.split()]
+print("NEST",nest)
 
 
 y = []
