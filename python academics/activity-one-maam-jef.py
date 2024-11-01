@@ -33,7 +33,7 @@ def mainMenu():
     print("\n McSavers Mix & Match")
     print("Create your Favorite Mix and Match! \n")
     while True:
-        action = input("type 'V' to view Orders \n type 'D' to delete orders \n type 'C' to Order \n type 'E' to exit.").lower()
+        action = input("\n type 'V' to view Orders \n type 'D' to delete orders \n type 'C' to Order \n type 'E' to exit.").lower()
         match action:
             case 'v':
                 viewOrders()
@@ -47,7 +47,7 @@ def mainMenu():
                 print("Thank you for visiting mcDO! \n Exiting program...")
                 exit()
             case _:
-                print("Invalid Action, continuing to next order.")
+                print("INVALID MEAL")
                 break
 
 while True:
@@ -90,7 +90,7 @@ while True:
             m = "Crispy Chicken Sandwich"
             p = 89
         case _ :
-            print("Invalid Input! Redirecting you back..")
+            print("INVALID SIDE! Redirecting you back..")
             continue 
 
     while True:
