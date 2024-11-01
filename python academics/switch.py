@@ -1,15 +1,3 @@
-# if, if elif, if else, if elif else
-# Arithmetic Operators
-# Assignment Operators
-
-# Comparison Operators > < == >= <= !=
-# Logical Operators and or not 
-# Membership Operators in not in
-
-
-
-
-
 library = []
 
 def add_book(title, author, year):
@@ -27,8 +15,7 @@ def display_books():
         print("No books in the library.")
         return
     for book in library:
-        status = "Checked Out" if book["is_checked_out"] else "Available"
-        print(f'{book["title"]} by {book["author"]} ({book["year"]}) - {status}')
+        print(f'{book["title"]} by {book["author"]} ({book["year"]}) - {"Checked Out" if book["is_checked_out"] else "Available"}')
 
 def check_out_book(title):
     for book in library:

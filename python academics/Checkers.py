@@ -5,16 +5,11 @@ students = [
     {'name': 'David', 'grade': 80},
     {'name': 'Eve', 'grade': 55},
 ]
-
 grd = [student for student in students if student['grade'] > 76]
 print(grd)
-
-
 x = "Hello world"
 nest = [word for word in x.split()]
 print("NEST",nest)
-
-
 y = []
 for n in nest:
     if len(n[0]) > 4:  
@@ -22,9 +17,6 @@ for n in nest:
         y.append([n[0][::-1]]) 
     else:
         y.append(n)
-
 print(y)  
-
 result_string = ' '.join([item[0] for item in y])
-
 print(result_string) 

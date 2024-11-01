@@ -1,5 +1,3 @@
-
-
 def count_vowels_and_consonants(input_string):
     vowels_count = 0
     consonants_count = 0
@@ -17,5 +15,5 @@ def count_vowels_and_consonants(input_string):
         "consonants": consonants_count
     }
 
-result = count_vowels_and_consonants("fweheheheh")
+result = count_vowels_and_consonants("hellow")
 print(result) 
