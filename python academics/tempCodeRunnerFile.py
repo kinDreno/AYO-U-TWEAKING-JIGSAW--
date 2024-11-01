@@ -51,8 +51,13 @@ def mainMenu():
             case 'd':
                 viewOrders()
                 print("Type 'e' to Exit")
-                delt = int(input("Enter the number you would like to delete in the cart: "))
-                deleteOrder(delt)
+                chosen = ""
+                delt = input("Enter the number you would like to delete in the cart: ")
+                if delt.lower() == 'e':
+                    chosen = delt
+                elif delt.isdigit():
+                    chosen = int(delt)
+                deleteOrder(chosen)
             case 'c': # If user inputted "E" the function exits and proceed to the next nested while Loop to start Ordering.
                 return
             case 'e': # if user inputted "E" the whole program ends.
