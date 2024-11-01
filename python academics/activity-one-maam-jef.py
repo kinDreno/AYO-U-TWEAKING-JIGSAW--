@@ -1,12 +1,18 @@
+# SUEDAD, ALQUIN MACABINGUIL BSCS 1-1
+# Activity no.2
+
+
 orders = []
 overAllPrice = 0
 m, s, p = "", "", 0
+# m is main, s is side, p is price
 def addOrder(main, side, price):
     order = {"main": main,
              "side": side,
              "price": price}
     orders.append(order)
 
+# this function is to view the orders
 def viewOrders():
     overAllPrice = 0
     if not orders:
@@ -18,6 +24,7 @@ def viewOrders():
         overAllPrice += order["price"]
     print(f"Overall Price is: ₱{overAllPrice}")
 
+# this function is to delete a specific order by using index
 def deleteOrder(n):
     if not orders:
         print("No Orders...")
@@ -26,14 +33,16 @@ def deleteOrder(n):
         orders.pop(n - 1)
         print("Successfully Deleted..")
     else: 
-        print("Invalid input number.")
+        print("Invalid input number. Redirecting you in Main Menu..")
 
+# this is the main menu.
 def mainMenu():
     print("Welcome to McDo!")
     print("\n McSavers Mix & Match")
-    print("Create your Favorite Mix and Match! \n")
+    print("Create your Favorite Mix and Match!")
+
     while True:
-        action = input("\n type 'V' to view Orders \n type 'D' to delete orders \n type 'C' to Order \n type 'E' to exit.").lower()
+        action = input("\n type 'V' to view Orders \n type 'D' to delete orders \n type 'C' to Order \n type 'E' to exit. \n Input Here: \t").lower()
         match action:
             case 'v':
                 viewOrders()
@@ -41,17 +50,19 @@ def mainMenu():
                 viewOrders()
                 delt = int(input("Enter the number you would like to delete in the cart: "))
                 deleteOrder(delt)
-            case 'c':
+            case 'c': # If user inputted "E" the function exits and proceed to the next nested while Loop to start Ordering.
                 return
-            case 'e':
-                print("Thank you for visiting mcDO! \n Exiting program...")
+            case 'e': # if user inputted "E" the whole program ends.
+                print("\n Thank you for visiting mcDO! \n Exiting program...")
                 exit()
             case _:
-                print("INVALID MEAL")
-                break
+                print("Invalid Input, Try again.")
+                continue
+
 
 while True:
     mainMenu()
+    m , s , p = "", "", 0
     print("Main meals Menu")
     print("\nCombo A ₱79")
     print("1- French Fries")
@@ -90,12 +101,12 @@ while True:
             m = "Crispy Chicken Sandwich"
             p = 89
         case _ :
-            print("INVALID SIDE! Redirecting you back..")
+            print("INVALID MEAL! Redirecting you back..")
             continue 
 
     while True:
 
-        print(f"You chose {m} as your Main Dish. Price of ₱{p} \n")
+        print(f"You chose {m} as your Main Dish. With a price of ₱{p} \n")
         print(f"Choose a side dish. \n")
         
         print("1- Apple Pie")
@@ -108,29 +119,28 @@ while True:
         match side:
             case 1:
                 print("You chose Apple Pie")
-                s = "Mushroom Pepper Steak"
-                break
+                s = "Apple Pie"
             case 2:
                 print("You chose Sundae")
                 s = "Sundae"
-                break
             case 3:
                 print("You chose Float")
                 s = "Float"
-                break
             case 4 :
                 print("You chose Iced Tea")
                 s = "Iced Tea"
-                break
             case 5:
                 print("You chose Softdrinks")
                 s = "Softdrinks"
-                break
             case 6:
                 print("You chose Iced Coffee Vanilla")
                 s = "Iced Coffee Vanilla"
-                break
             case _:
-                print("Invalid input, Redirecting you back..")
+                print("INVALID SIDE, Redirecting you back..")
                 continue
-    addOrder(m, s, p)
+
+        print("\n === === === === === === === === === === === === ===")
+        print(f"Added {m} as yourMain Dish, and {s} as your Side dish. \n To view and see the total Price of your order(s), type V in the Main Menu. \n Thank you!")
+        addOrder(m, s, p)
+        input("Input anything here to continue...")
+        break
