@@ -1,7 +1,3 @@
-# SUEDAD, ALQUIN MACABINGUIL BSCS 1-1
-# Activity no.2
-
-
 orders = []
 overAllPrice = 0
 m, s, p = "", "", 0
@@ -121,8 +117,17 @@ while True:
                 print("You chose Apple Pie")
                 s = "Apple Pie"
             case 2:
-                print("You chose Sundae")
-                s = "Sundae"
+                while True:
+                    choose = int(input(" \n 1.) Caramel \n 2.) Hot Fudge \n Input Here: "))
+                    if (choose == 1):
+                        s = "Caramel Flavored Sundae"
+                        break
+                    elif (choose == 2):
+                        s = "Hot Fudge Flavored Sundae"
+                        break
+                    else:
+                        print("Invalid Input. Try again.")
+                        continue
             case 3:
                 print("You chose Float")
                 s = "Float"
